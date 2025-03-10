@@ -104,7 +104,7 @@ body {
 }
 
 /* Navigation Buttons */
-.prev, .next {
+/* .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -114,6 +114,43 @@ body {
     padding: 10px;
     cursor: pointer;
     z-index: 10;
+} */
+
+.prev, .next {
+    display: flex; /* Enables centering */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Arrow Styling */
+.prev::after, 
+.next::after {
+    content: '\276E'; /* Unicode left arrow */
+    font-size: 24px; /* Adjust size */
+    color: white; /* Arrow color */
+}
+
+/* Right arrow */
+.next::after {
+    content: '\276F'; /* Unicode right arrow */
+}
+
+
+/* Remove unwanted extra arrows */
+.prev::before,
+.next::before {
+    content: none !important; /* Ensure no extra arrows */
 }
 
 .prev { left: 10px; }
