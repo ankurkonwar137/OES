@@ -91,9 +91,9 @@ body {
 /* Responsive Captions */
 .caption {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Perfect center */
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%); /* Only center horizontally */
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 10px 20px;
@@ -163,14 +163,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
 /* Course Card Styling */
 
 h1 {
@@ -178,7 +170,6 @@ h1 {
     font-weight: bold;
     color: #3AA;
 }
-
 
 .course-card {
     border-radius: 15px;
