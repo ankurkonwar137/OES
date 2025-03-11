@@ -6,6 +6,15 @@ body {
 
 }
 
+.container-fluid {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+
+
 /* Navbar Styling */
 .navbar {
     background: linear-gradient(to right, #939fb5, #2e86da);
@@ -132,7 +141,7 @@ body {
     width: 100%;
     height: auto;
     /* Make images responsive */
-    max-height: 437px;
+    max-height: 362px;
     /* Prevent extremely tall images */
     /* object-fit: cover; */
 }
@@ -169,11 +178,14 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover;
+    background-position: center; */
+    background: none;
     box-shadow: none;
     outline: none;
     cursor: pointer;
+    border:none;
+
 }
 
 /* Arrow Styling */
@@ -210,12 +222,12 @@ body {
 }
 
 /* Dots */
-.dots-container {
+/* .dots-container {
     text-align: center;
     margin-top: 10px;
-}
+} */
 
-.dot {
+/* .dot {
     height: 10px;
     width: 10px;
     margin: 0 5px;
@@ -223,11 +235,11 @@ body {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
-}
+} */
 
-.dot.active {
+/* .dot.active {
     background-color: #717171;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {

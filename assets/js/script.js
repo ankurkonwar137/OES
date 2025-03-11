@@ -5,13 +5,13 @@ $(document).ready(function () {
     let slideInterval;
 
     // Function to update preview images in arrows
-    function updateArrowImages() {
-        let prevIndex = (slideIndex - 1 + slideCount) % slideCount;
-        let nextIndex = (slideIndex + 1) % slideCount;
+    //function updateArrowImages() {
+        // let prevIndex = (slideIndex - 1 + slideCount) % slideCount;
+        // let nextIndex = (slideIndex + 1) % slideCount;
 
-        $(".prev").css("background-image", `url('${$slides.eq(prevIndex).attr("src")}')`);
-        $(".next").css("background-image", `url('${$slides.eq(nextIndex).attr("src")}')`);
-    }
+        // $(".prev").css("background-image", `url('${$slides.eq(prevIndex).attr("src")}')`);
+        // $(".next").css("background-image", `url('${$slides.eq(nextIndex).attr("src")}')`);
+   // }
 
     // Function to show slides
     function showSlide(index) {
@@ -21,7 +21,7 @@ $(document).ready(function () {
             "transition": "transform 0.5s ease-in-out" // Smooth transition
         });
 
-        updateArrowImages();
+       // updateArrowImages();
     }
 
     function nextSlide() {
@@ -45,7 +45,7 @@ $(document).ready(function () {
     }
 
     // Initialize slider
-    updateArrowImages();
+   // updateArrowImages();
     showSlide(slideIndex);
     startSlideShow(); // Start automatic sliding
 
