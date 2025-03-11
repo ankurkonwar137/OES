@@ -16,12 +16,15 @@ $(document).ready(function () {
 
     // Function to show slides
     function showSlide(index) {
-        if (index >= slideCount) slideIndex = 0;
-        if (index < 0) slideIndex = slideCount - 1;
-
-        $(".carousel-container").css("transform", `translateX(${-slideIndex * 100}%)`);
+        slideIndex = (index + slideCount) % slideCount; // Ensures index stays within range
+        $(".carousel-container").css({
+            "transform": `translateX(${-slideIndex * 100}%)`,
+            "transition": "transform 0.5s ease-in-out" // Smooth transition
+        });
+    
         updateArrowImages();
     }
+    
 
     // Next slide function
     function nextSlide() {
@@ -56,6 +59,7 @@ $(document).ready(function () {
 
     // Stop autoplay when hovering over the carousel
     $(".carousel-container").hover(stopSlideShow, startSlideShow);
+
 
 //scroll to top
     // Show/Hide button on scroll

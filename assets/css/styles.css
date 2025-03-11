@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden;/*prevent horizontal scroll*/
+    
 }
 
 /* Navbar Styling */
@@ -18,7 +19,7 @@ body {
 }
 
 .logo {
-    max-height: 80px; /* Keep height consistent */
+    max-height: 80px;   
     height: auto;
     width: auto;
     object-fit: contain;
@@ -40,7 +41,7 @@ body {
     color: #000;
 }
 
-/* ✅ Responsive Adjustments */
+
 @media (max-width: 992px) {
     .text-behind-logo {
         font-size: 14px;
@@ -101,7 +102,6 @@ body {
     }
 }
 
-
 /* carousel style */
 .carousel-container {
     display: flex;
@@ -124,7 +124,7 @@ body {
 .slide img {
     width: 100%;
     height: auto; /* Make images responsive */
-    max-height: 837px; /* Prevent extremely tall images */
+    max-height: 437px; /* Prevent extremely tall images */
     /* object-fit: cover; */
 }
 
@@ -468,5 +468,13 @@ footer {
 .scroll-top:hover {
     background: #0056b3;
 }
+
+
+
+/* .carousel, .carousel-container, .slide img, #footer-placeholder {
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+} */
 
 
