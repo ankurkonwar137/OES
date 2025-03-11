@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     let slideIndex = 0;
     const $slides = $(".slide img");
@@ -21,24 +20,21 @@ $(document).ready(function () {
             "transform": `translateX(${-slideIndex * 100}%)`,
             "transition": "transform 0.5s ease-in-out" // Smooth transition
         });
-    
+
         updateArrowImages();
     }
-    
 
-    // Next slide function
     function nextSlide() {
         slideIndex++;
         showSlide(slideIndex);
     }
-
-    // Previous slide function
+    
     function prevSlide() {
         slideIndex--;
         showSlide(slideIndex);
     }
 
-    // Function to start automatic sliding
+    // start automatic sliding
     function startSlideShow() {
         slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
     }
@@ -60,8 +56,7 @@ $(document).ready(function () {
     // Stop autoplay when hovering over the carousel
     $(".carousel-container").hover(stopSlideShow, startSlideShow);
 
-
-//scroll to top
+    //scroll to top
     // Show/Hide button on scroll
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -76,16 +71,16 @@ $(document).ready(function () {
         $("html, body").animate({ scrollTop: 0 }, 500);
     });
 
-});
+    //for notification hover
+    $("#marquee").hover(
+        function () { this.stop(); },
+        function () { this.start(); }
+    );
+
+    //load header and footer
+    $("#navbar-placeholder").load("header.html");
+    $("#footer-placeholder").load("footer.html");
 
 
-
-
-document.getElementById("marquee").addEventListener("mouseover", function() {
-    this.stop();
-});
-
-document.getElementById("marquee").addEventListener("mouseout", function() {
-    this.start();
 });
 
