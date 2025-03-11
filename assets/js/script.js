@@ -56,5 +56,21 @@ $(document).ready(function () {
 
     // Stop autoplay when hovering over the carousel
     $(".carousel-container").hover(stopSlideShow, startSlideShow);
+
+//scroll to top
+    // Show/Hide button on scroll
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $(".scroll-top").fadeIn();
+        } else {
+            $(".scroll-top").fadeOut();
+        }
+    });
+
+    // Scroll to top when clicked
+    $(".scroll-top").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 500);
+    });
+
 });
 
