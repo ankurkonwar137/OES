@@ -78,3 +78,14 @@ $(document).ready(function () {
 
 });
 
+
+
+
+document.getElementById("marquee").addEventListener("mouseover", function() {
+    this.stop();
+});
+
+document.getElementById("marquee").addEventListener("mouseout", function() {
+    this.start();
+});
+

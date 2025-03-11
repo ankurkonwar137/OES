@@ -7,7 +7,8 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background: linear-gradient(to right, #F5F5F5, #003366);
+    background: linear-gradient(to right, #F5F5F5, #89a0b6);
+    /* background-color: #ecf0f1; */
     padding: 10px 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -83,6 +84,7 @@ body {
         text-align: center;
     }
 }
+
 
 /* Fix Dropdown Hover Issue on Mobile */
 @media (max-width: 768px) {
@@ -321,74 +323,90 @@ h1 {
     transition: 0.3s ease-in-out;
 }
 
-/* notification */
 
-/* Notification Header */
-.notification-header {
-    background: #f8f9fa;
-    color: #333;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    border: 1px solid #ddd;
-}
+/* Floating notification panel */ .notification-panel {
+            position:absolute;
+            right: 20px;
+            top: 600px;
+            width: 280px;
+            background:     #56b0b0;
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
 
-/* Notification List - Scrollable */
-.notification-list {
-    max-height: 250px; /* Fixed height */
-    overflow-y: auto;  /* Scrollable when more notifications exist */
-    padding-right: 5px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-}
+        /* Heading */
+        .notification-panel h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ff9900;
+            padding-bottom: 5px;
+            text-align: center;
+        }
 
-/* Custom Scrollbar */
-.notification-list::-webkit-scrollbar {
-    width: 6px;
-}
+        /* Marquee Scrolling Area */
+        .notification-marquee {
+            height: 200px; /* Adjust height as needed */
+            display: block;
+        }
 
-.notification-list::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 10px;
-}
+        /* Notification Items */
+        .notification-item {
+            display: block;
+            background: #008080;
+            color: white;
+            padding: 8px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-size: 14px;
+        }
 
-/* Clickable Notification Card */
-.notification-card-link {
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-}
+        .notification-item:hover {
+            background: #ff9900;
+        }
 
-/* Notification Card Styling */
-.notification-card {
-    background: #ffffff;
-    padding: -1px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
+        /* View All Button */
+        .view-all {
+            text-align: center;
+            margin-top: 10px;
+        }
 
-/* Hover Effect */
-.notification-card:hover {
-    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
-}
+        .view-all a {
+            display: inline-block;
+            background: #ff9900;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
 
-/* Text Styling */
-.notification-card .card-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-}
+        .view-all a:hover {
+            background: #cc7700;
+        }
 
-.notification-card .card-text {
-    font-size: 14px;
-    color: #666;
-}
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .notification-panel {
+                width: 240px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .notification-panel {
+                position: relative;
+                width: 100%;
+                right: 0;
+                top: auto;
+                margin: 10px 0;
+            }
+        }
+
 
 /* footer */
 footer {
@@ -457,7 +475,7 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #007bff;
+    background: #a31414;
     color: #fff;
     padding: 10px 12px;
     border-radius: 50%;
@@ -469,12 +487,5 @@ footer {
     background: #0056b3;
 }
 
-
-
-/* .carousel, .carousel-container, .slide img, #footer-placeholder {
-    width: 100% !important;
-    margin: 0;
-    padding: 0;
-} */
 
 
