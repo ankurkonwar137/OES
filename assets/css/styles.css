@@ -13,11 +13,9 @@ body {
 }
 
 
-
-
 /* Navbar Styling */
 .navbar {
-    background: linear-gradient(to right, #939fb5, #2e86da);
+    background: linear-gradient(to right, #939fb5, #6698c7);
     /* background-color: #ecf0f1; */
     padding: 10px 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -290,6 +288,12 @@ h1 {
 .course-card img {
     height: 180px;
     object-fit: contain;
+    width: 100%;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .course-badge {
@@ -350,10 +354,7 @@ h1 {
     transform: translateY(0);
 }
 
-.card-link {
-    text-decoration: none;
-    color: inherit;
-}
+
 
 .card-link:hover .card {
     transform: scale(1.03);
@@ -365,14 +366,31 @@ h1 {
 .notification-panel {
     position: absolute;
     right: 283px;
-    top: 684px;
-    width: 280px;
+    top: 584px;
+    width: 305px;
     background: #56b0b0;
     color: white;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .notification-panel {
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .notification-panel {
+        position: relative;
+        width: 100%;
+        margin: 10px 0;
+        right: 0;
+        top: auto;
+    }
 }
 
 /* Heading */
@@ -387,7 +405,6 @@ h1 {
 /* Marquee Scrolling Area */
 .notification-marquee {
     height: 200px;
-    /* Adjust height as needed */
     display: block;
 }
 
@@ -430,7 +447,7 @@ h1 {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .notification-panel {
         width: 240px;
     }
@@ -443,6 +460,85 @@ h1 {
         right: 0;
         top: auto;
         margin: 10px 0;
+    }
+} */
+
+/* Remove or comment out the duplicate notification-panel styles */
+
+.notification-panel {
+    background: #259292; /* Teal/greenish background color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+.notification-title {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.notification-content {
+    height: auto;
+    max-height: 400px;
+}
+
+.notification-scroll {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.notification-item {
+    display: block;
+    padding: 12px 15px;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.notification-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+.view-all {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.view-all a {
+    color: #fff;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.view-all a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 767px) {
+    .notification-panel {
+        margin-top: 20px;
+        position: static;
+    }
+    
+    .notification-content {
+        height: 250px;
+    }
+    
+    .notification-scroll {
+        height: 170px;
     }
 }
 
@@ -458,8 +554,96 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* Course and Notification Layout */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+    }
+    
+    /* Main content column for courses */
+    .col-lg-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+        padding: 10px;
+    }
+    
+    /* Notification panel column */
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 10px;
+    }
+    
+    .notification-panel {
+        background: #17a2b8;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        height: 100%;
+    }
+    
+    .notification-content {
+        height: auto;
+        max-height: 400px;
+    }
+    
+    .notification-scroll {
+        max-height: 350px;
+        overflow-y: auto;
+    }
+    
+    /* Responsive breakpoints */
+    @media (max-width: 1200px) {
+        .container {
+            padding: 0 15px;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .col-lg-9, .col-lg-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        
+        .notification-panel {
+            margin-top: 20px;
+            height: auto;
+        }
+        
+        .notification-content {
+            max-height: 300px;
+        }
+        
+        .notification-scroll {
+            max-height: 250px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .notification-content {
+            max-height: 250px;
+        }
+        
+        .notification-scroll {
+            max-height: 200px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .container {
+            padding: 0 10px;
+        }
+        
+        .notification-panel {
+            margin: 15px 0;
+        }
+    }
     padding: 20px;
 }
 
