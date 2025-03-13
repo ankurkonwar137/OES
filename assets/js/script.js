@@ -78,7 +78,31 @@ $(document).ready(function () {
     );
 
     //load header and footer
-    $("#navbar-placeholder").load("header.html");
+    $("#navbar-placeholder").load("header.html", function() {
+        // Initialize dropdowns after header is loaded
+        $("#navbar-placeholder").load("header.html", function() {
+            // Initialize Bootstrap dropdowns
+            var dropdowns = document.querySelectorAll('.dropdown-toggle');
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var dropdownMenu = this.nextElementSibling;
+                    dropdownMenu.classList.toggle('show');
+                });
+            });
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropdown-toggle')) {
+            var dropdowns = document.querySelectorAll('.dropdown-menu.show');
+            dropdowns.forEach(function(dropdown) {
+                dropdown.classList.remove('show');
+            });
+        }
+    });
     $("#footer-placeholder").load("footer.html");
 
 
