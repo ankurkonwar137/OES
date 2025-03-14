@@ -325,6 +325,10 @@ body {
 
 /* Course Card Styling */
 
+/* #courseSection{
+    display: none;
+} */
+
 h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -744,7 +748,7 @@ footer {
 }
 
 /* Content Box */
-.content-box {
+/* .content-box {
     max-width: 800px;
     background: #f8f9fa;
     padding: 20px;
@@ -756,20 +760,41 @@ footer {
     line-height: 1.6;
     color: #333;
     transition: transform 0.3s, box-shadow 0.3s;
-}
+} */
 
 /* Hover Effect */
-.content-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-}
+/*  */
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .content-box {
         padding: 15px;
         font-size: 16px;
     }
+} */
+
+.content-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+.content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+.content-box h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #343a40;
+}
+.content-box p {
+    text-align: justify;
+    color: #555;
+    line-height: 1.6;
 }
 
 
