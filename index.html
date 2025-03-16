@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Add these lines after existing meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Education & Skilling</title>
+    <link rel="icon" href="assets/icons/iit_icon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/bootstrap-5.0.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="bg-light">
+
+    <div class="container-fluid">
+
+        <div id="navbar-placeholder"></div>
+
+        <div class="content-spacing"></div>
+
+        <!-- Carousel Section -->
+        <section class="carousel ">
+            <div class="carousel-container">
+                <div class="slide active">
+                    <img src="assets/images/slider/oesBanner4.png" alt="Online Learning">
+                    <!-- <div class="caption">Welcome to Online Education & Skilling</div> -->
+                </div>
+                <div class="slide">
+                    <img src="assets/images/slider/cultural.png" alt="Skill Development">
+                    <!-- <div class="caption">Enhance Your Professional Skills</div> -->
+                </div>
+                <div class="slide">
+                    <img src="assets/images/slider/AI_Con_New.jpg" alt="Team Work">
+                    <!-- <div class="caption">Learn from Industry Experts</div> -->
+                </div>
+                <!-- <div class="slide">
+                    <img src="assets/images/slider/ban4.jpeg" alt="Online Learning"> -->
+                    <!-- <div class="caption">Transform Your Future with Digital Learning</div> -->
+                <!-- </div> -->
+                
+                
+            </div>
+
+            <!-- Carousel Arrows -->
+            <button class="prev" onclick="prevSlide()"></button>
+            <button class="next" onclick="nextSlide()"></button>
+
+            <!-- For Dot Carousel-->
+            <!-- <div class="dots-container">
+           
+            </div> -->
+        </section>
+
+        <div class="container py-5" id="courseSection">
+            <h1 class="text-center mb-4" style="display: none;">🌟 Explore Our Courses</h1>
+
+            <div class="row">
+                <!-- Main content column for courses -->
+                <div class="col-lg-9 col-md-8" style="display: none;">
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <a href="https://eict.iitg.ac.in/" target="_blank" class="card-link">
+                                <div class="card course-card shadow-lg">
+                                    <img src="assets/images/e&ict.jpg" class="card-img-top" alt="Course">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">UI/UX Design</h5>
+                                        <p class="card-text">Master design principles and build stunning UI.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <!-- Notification panel column -->
+                <div class="col-lg-3 col-md-4">
+                    <aside class="notification-panel sticky-top">
+                        <h3 class="notification-title" >Notifications</h3>
+                        <div class="notification-content">
+                            <marquee direction="up" scrollamount="2" behavior="scroll" class="notification-scroll" onmouseover="this.stop();" onmouseout="this.start();">
+                                <a href="https://iitg.ac.in/acad/admission/online/" target="_blank" class="notification-item">📢 Online BSc (Hons) in AI</a>
+                                <a href="#" class="notification-item">📢 Exam Date Announced</a>
+                                <a href="#" class="notification-item">📢 New Course Available</a>
+                                <a href="#" class="notification-item">📢 Announcement for new admission</a>
+                                <a href="#" class="notification-item">📢 Workshop on Cyber-Security</a>
+                            </marquee>
+                            <div class="view-all">
+                                <a href="notification.html">View All</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        
+        <br />
+        <div class="content-box" id="about">
+            <h2>About</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <br />
+        <div id="footer-placeholder"></div>
+
+        <div class="scroll-top" onclick="scrollToTop()">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+
+    </div>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

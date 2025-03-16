@@ -1,0 +1,800 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /*prevent horizontal scroll*/
+
+}
+
+.container-fluid {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(to right, #939fb5, #6698c7);
+    /* background-color: #ecf0f1; */
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo on Left */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-height: 80px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Text Right of Logo */
+.text-behind-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.hindi-text,
+.english-text,
+.iit-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+
+@media (max-width: 992px) {
+    .text-behind-logo {
+        font-size: 14px;
+    }
+
+    .hindi-text,
+    .english-text,
+    .iit-text {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-behind-logo {
+        font-size: 12px;
+        padding-left: 5px;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        max-height: 50px;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+}
+
+
+/* Fix Dropdown Hover Issue on Mobile */
+@media (max-width: 768px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    .navbar .dropdown-menu.show {
+        display: block;
+    }
+}
+
+/* Show dropdown menu on hover (only for desktop) */
+@media (min-width: 769px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f8f9fa;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+        text-align: center;
+    }
+
+    
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 5px auto;
+        padding: 0;
+    }
+
+    .dropdown-menu.show {
+        display: block !important;
+    }
+
+    
+    .dropdown-item {
+        text-align: center;
+        padding: 12px 20px;
+        background-color: #d1e6f9;
+        margin: 2px auto;
+        width: 90%;
+        border-radius: 4px;
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        justify-content: center;
+        padding: 10px 20px;
+    }
+}
+
+/* carousel style */
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-top: 70px;
+}
+
+/* Slides */
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    /* Make images responsive */
+    max-height: 362px;
+    /* Prevent extremely tall images */
+    /* object-fit: cover; */
+}
+
+/* Responsive Captions */
+.caption {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Only center horizontally */
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 3.0rem;
+    /* Responsive font size */
+    max-width: 80%;
+}
+
+
+.prev,
+.next {
+    display: flex;
+    /* Enables centering */
+    align-items: center;
+    /* Centers vertically */
+    justify-content: center;
+    /* Centers horizontally */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* background-size: cover;
+    background-position: center; */
+    background: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    border:none;
+
+}
+
+/* Arrow Styling */
+.prev::after,
+.next::after {
+    content: '\276E';
+    /* Unicode left arrow */
+    font-size: 24px;
+    /* Adjust size */
+    color: white;
+    /* Arrow color */
+}
+
+/* Right arrow */
+.next::after {
+    content: '\276F';
+    /* Unicode right arrow */
+}
+
+
+/* Remove unwanted extra arrows */
+.prev::before,
+.next::before {
+    content: none !important;
+    /* Ensure no extra arrows */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Dots */
+/* .dots-container {
+    text-align: center;
+    margin-top: 10px;
+} */
+
+/* .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+} */
+
+/* .dot.active {
+    background-color: #717171;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slide img {
+        height: 400px;
+        /* Adjust height for tablets */
+    }
+
+    .caption {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .slide img {
+        height: 200px;  /* Reduced from 300px for better mobile view */
+    }
+
+    .carousel {
+        margin-top: 50px;  /* Reduced from 70px */
+    }
+
+    .prev, .next {
+        width: 40px;  /* Smaller buttons for mobile */
+        height: 40px;
+    }
+}
+
+
+/* Course Card Styling */
+
+/* #courseSection{
+    display: none;
+} */
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3AA;
+}
+
+.course-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    height: 180px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.course-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 87, 34, 0.9);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.course-card .card-body {
+    padding: 20px;
+    background: #fff;
+}
+
+.course-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-card .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Explore Button */
+.explore-btn {
+    background-color: #007bff;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Initially hide the description */
+.course-card .card-text {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show the description on hover */
+.course-card:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.card-link:hover .card {
+    transform: scale(1.03);
+    /* Slight zoom effect on hover */
+    transition: 0.3s ease-in-out;
+}
+
+/* Floating notification panel */
+
+.notification-panel {
+    background: #259292; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    position: sticky;
+    top: 20px;
+    width: 305px;
+    color: white;
+    z-index: 1000;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .notification-panel {
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .notification-panel {
+        position: relative;
+        width: 100%;
+        margin: 10px 0;
+        right: 0;
+        top: auto;
+    }
+}
+/* Heading */
+.notification-panel h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff9900;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/* Marquee Scrolling Area */
+.notification-marquee {
+    height: 200px;
+    display: block;
+}
+
+/* Notification Items */
+.notification-item {
+    display: block;
+    background: #008080;
+    color: white;
+    padding: 8px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+.notification-item:hover {
+    background: #ff9900;
+}
+
+/* View All Button */
+.view-all {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.view-all a {
+    display: inline-block;
+    background: #ff9900;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.view-all a:hover {
+    background: #cc7700;
+}
+
+.notification-title {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.notification-content {
+    height: auto;
+    max-height: 300px;
+}
+
+.notification-scroll {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* Keep this version of notification-item and remove the other */
+.notification-item {
+    display: block;
+    padding: 12px 15px;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.notification-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+/* Keep this version of view-all and remove the other */
+.view-all {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.view-all a {
+    color: #fff;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.view-all a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 767px) {
+    .notification-panel {
+        margin-top: 20px;
+        position: static;
+    }
+    
+    .notification-content {
+        height: 200px;
+    }
+    
+    .notification-scroll {
+        height: 150px;
+    }
+}
+
+/* footer */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Course and Notification Layout */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+    }
+    
+    /* Main content column for courses */
+    .col-lg-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+        padding: 10px;
+    }
+    
+    /* Notification panel column */
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 10px;
+    }
+    
+    .notification-panel {
+        background: #17a2b8;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        height: 100%;
+    }
+    
+    .notification-content {
+        height: auto;
+        max-height: 400px;
+    }
+    
+    .notification-scroll {
+        max-height: 350px;
+        overflow-y: auto;
+    }
+    
+    /* Responsive breakpoints */
+    @media (max-width: 1200px) {
+        .container {
+            padding: 0 15px;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .col-lg-9, .col-lg-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        
+        .notification-panel {
+            margin-top: 20px;
+            height: auto;
+        }
+        
+        .notification-content {
+            max-height: 300px;
+        }
+        
+        .notification-scroll {
+            max-height: 250px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .notification-content {
+            max-height: 250px;
+        }
+        
+        .notification-scroll {
+            max-height: 200px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .container {
+            padding: 0 10px;
+        }
+        
+        .notification-panel {
+            margin: 15px 0;
+        }
+    }
+}
+
+.footer-section {
+    width: 22%;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    color: #f8f9fa;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    color: #00c6ff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background: #000;
+    font-size: 13px;
+
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #a31414;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-top:hover {
+    background: #0056b3;
+}
+
+/* about section */
+.content-spacing {
+    height: 30px;
+}
+
+/* Content Box */
+/* .content-box {
+    max-width: 800px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+} */
+
+/* Hover Effect */
+/*  */
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    .content-box {
+        padding: 15px;
+        font-size: 16px;
+    }
+} */
+
+.content-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+.content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+.content-box h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #343a40;
+}
+.content-box p {
+    text-align: justify;
+    color: #555;
+    line-height: 1.6;
+}
+
+
