@@ -1,9 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Add these lines after existing meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Education & Skilling</title>
+    <link rel="icon" href="assets/icons/iit_icon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/bootstrap-5.0.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+</head>
+
 <header>
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
         <div class="container">
             <!-- Logo and Text Section -->
             <div class="d-flex align-items-center flex-grow-1">
-                <a class="navbar-brand me-3" href="index.html">
+                <a class="navbar-brand me-3" href="index.php">
                     <img src="assets/images/iitg_web_mid.gif" alt="Logo" title="OES-LOGO" class="logo">
                 </a>
                 <div class="text-behind-logo">
@@ -23,8 +43,8 @@
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><b>Home</b></a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about"><b>About</b></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php"><b>Home</b></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php#about"><b>About</b></a></li>
                     
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button"
@@ -32,7 +52,7 @@
                             <b>Team</b>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="teamDropdown">
-                            <li><a href="team.html" class="dropdown-item">Online Programmes</a></li>
+                            <li><a href="team.php" class="dropdown-item">Online Programmes</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -59,3 +79,5 @@
         </div>
     </nav>
 </header>
+
+<body class="bg-light">

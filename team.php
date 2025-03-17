@@ -1,3 +1,8 @@
+
+<?php 
+ include './header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,14 +22,11 @@
         @media (max-width: 768px) {
             .team-card-container {
                 max-width: 350px !important;
-                /* Adjust width for smaller screens */
                 height: 300px !important;
-                /* Reduce height slightly */
             }
 
             .profile-img {
                 width: 130px !important;
-                /* Adjust image size */
                 height: 180px !important;
                 margin-bottom: 10px;
             }
@@ -48,7 +50,7 @@
 </head>
 
 <body class="bg-light">
-    <div id="navbar-placeholder"></div>
+    <!-- <div id="navbar-placeholder"></div> -->
 
     <div class="container mt-4" id="idOnlineStaffs">
         <h2 class="text-center mb-4">People handling Online Degree Programmes</h2>
@@ -486,23 +488,21 @@
             </div>
         </div>
     </div>
-    <div id="footer-placeholder"></div>
+    <!-- <div id="footer-placeholder"></div> -->
     <div class="scroll-top" onclick="scrollToTop()">
-        <!-- <i class="fas fa-arrow-up"></i> -->
         <i class="fa-solid fa-arrow-up"></i>
     </div>
 
     <script src="assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
 
-    <!-- <script src="assets/js/script.js"></script> -->
 
 </body>
 <script>
-    $(document).ready(function () {
-        $("#navbar-placeholder").load("header.html");
-        $("#footer-placeholder").load("footer.html");
-    });
+    // $(document).ready(function () {
+    //     $("#navbar-placeholder").load("header.html");
+    //     $("#footer-placeholder").load("footer.html");
+    // });
     window.addEventListener("scroll", function () {
         document.querySelector(".scroll-top").style.display =
             window.scrollY > 200 ? "block" : "none";
@@ -515,3 +515,6 @@
 </script>
 
 </html>
+<?php 
+    include './footer.php';
+ ?>

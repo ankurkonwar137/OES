@@ -1,3 +1,4 @@
+
 <footer>
     <div class="footer-container">
         <div class="footer-section contact">
@@ -5,7 +6,7 @@
             <p>Academic Affairs Section</p>
             <p>Indian Institute of Technology Guwahati</p>
             <p>Guwahati - 781039, Assam, India</p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:acadoff@iitg.ac.in">acadoff@iitg.ac.in</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:oesoff@iitg.ac.in">acadoff@iitg.ac.in</a></p>
             <p><i class="fas fa-phone"></i> Fax: +91-0361-2582192</p>
         </div>
 
@@ -44,3 +45,16 @@
         <p>Designed by <a href="#">Online Education & Skilling</a></p>
     </div>
 </footer>
+
+
+<div class="scroll-top" onclick="scrollToTop()">
+    <i class="fa-solid fa-arrow-up"></i>
+</div>
+
+</div>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>

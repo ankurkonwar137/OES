@@ -194,7 +194,7 @@ body {
     width: 100%;
     height: auto;
     /* Make images responsive */
-    max-height: 362px;
+    max-height: 450px;
     /* Prevent extremely tall images */
     /* object-fit: cover; */
 }
@@ -309,25 +309,18 @@ body {
 
 @media (max-width: 576px) {
     .slide img {
-        height: 200px;  /* Reduced from 300px for better mobile view */
+        height: 300px;
+        /* Adjust height for mobile */
     }
 
-    .carousel {
-        margin-top: 50px;  /* Reduced from 70px */
-    }
-
-    .prev, .next {
-        width: 40px;  /* Smaller buttons for mobile */
-        height: 40px;
+    .caption {
+        font-size: 1rem;
+        max-width: 95%;
     }
 }
 
 
 /* Course Card Styling */
-
-/* #courseSection{
-    display: none;
-} */
 
 h1 {
     font-size: 2rem;
@@ -425,19 +418,19 @@ h1 {
 }
 
 /* Floating notification panel */
-
 .notification-panel {
-    background: #259292; 
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    position: sticky;
-    top: 20px;
+    position: absolute;
+    right: 283px;
+    top: 584px;
     width: 305px;
+    background: #56b0b0;
     color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .notification-panel {
@@ -454,6 +447,7 @@ h1 {
         top: auto;
     }
 }
+
 /* Heading */
 .notification-panel h3 {
     font-size: 18px;
@@ -507,6 +501,18 @@ h1 {
     background: #cc7700;
 }
 
+/* Remove or comment out the duplicate notification-panel styles */
+
+.notification-panel {
+    background: #259292; /* Teal/greenish background color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    position: sticky;
+    top: 20px;
+}
+
 .notification-title {
     color: #fff;
     font-size: 1.25rem;
@@ -517,15 +523,14 @@ h1 {
 
 .notification-content {
     height: auto;
-    max-height: 300px;
+    max-height: 400px;
 }
 
 .notification-scroll {
-    max-height: 250px;
+    max-height: 350px;
     overflow-y: auto;
 }
 
-/* Keep this version of notification-item and remove the other */
 .notification-item {
     display: block;
     padding: 12px 15px;
@@ -542,7 +547,6 @@ h1 {
     transform: translateX(5px);
 }
 
-/* Keep this version of view-all and remove the other */
 .view-all {
     text-align: right;
     margin-top: 15px;
@@ -568,6 +572,241 @@ h1 {
     }
     
     .notification-content {
+        height: 250px;
+    }
+    
+    .notification-scroll {
+        height: 170px;
+    }
+}
+
+/* footer */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Course and Notification Layout */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+    }
+    
+    /* Main content column for courses */
+    .col-lg-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+        padding: 10px;
+    }
+    
+    /* Notification panel column */
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 10px;
+    }
+    
+    .notification-panel {
+        background: #17a2b8;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        height: 100%;
+    }
+    
+    .notification-content {
+        height: auto;
+        max-height: 400px;
+    }
+    
+    .notification-scroll {
+        max-height: 350px;
+        overflow-y: auto;
+    }
+    
+    /* Responsive breakpoints */
+    @media (max-width: 1200px) {
+        .container {
+            padding: 0 15px;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .col-lg-9, .col-lg-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        
+        .notification-panel {
+            margin-top: 20px;
+            height: auto;
+        }
+        
+        .notification-content {
+            max-height: 300px;
+        }
+        
+        .notification-scroll {
+            max-height: 250px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .notification-content {
+            max-height: 250px;
+        }
+        .notification-scroll {
+            max-height: 200px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .container {
+            padding: 0 10px;
+        }
+        .notification-panel {
+            margin: 15px 0;
+        }
+    }
+    padding: 20px;
+}
+
+.footer-section {
+    width: 22%;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    color: #f8f9fa;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    color: #00c6ff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background: #000;
+    font-size: 13px;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #a31414;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-top:hover {
+    background: #0056b3;
+}
+
+/* about section */
+.content-spacing {
+    height: 30px;
+}
+
+/* Content Box */
+.content-box {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;  /* Make it full height */
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Notification Panel */
+.notification-panel {
+    background: #259292;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 100%;
+    width: 100%; /* Make it full width */
+}
+
+.notification-content {
+    height: 300px;
+    overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+    .notification-panel {
+        width: 100%;
+    }
+}
+
+.notification-scroll {
+    height: 250px;
+    overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .notification-panel {
+        margin-bottom: 20px;
+    }
+    
+    .notification-content {
+        height: 250px;
+    }
+}
+
+@media (max-width: 767px) {
+    .notification-panel {
+        padding: 20px;
+        margin: 15px 0;
+    }
+    
+    .notification-content {
         height: 200px;
     }
     
@@ -575,7 +814,6 @@ h1 {
         height: 150px;
     }
 }
-
 /* footer */
 footer {
     background: #111;
@@ -678,6 +916,7 @@ footer {
             margin: 15px 0;
         }
     }
+    padding: 20px;
 }
 
 .footer-section {
@@ -748,8 +987,9 @@ footer {
 }
 
 /* Content Box */
-/* .content-box {
+.content-box {
     max-width: 800px;
+    max-height: 600px;
     background: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
@@ -760,41 +1000,134 @@ footer {
     line-height: 1.6;
     color: #333;
     transition: transform 0.3s, box-shadow 0.3s;
-} */
+}
 
 /* Hover Effect */
-/*  */
-
-/* Responsive Design */
-/* @media (max-width: 768px) {
-    .content-box {
-        padding: 15px;
-        font-size: 16px;
-    }
-} */
-
-.content-box {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: none;
-    margin: 0;
-}
 .content-box:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
-.content-box h2 {
-    text-align: center;
-    font-weight: bold;
-    color: #343a40;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-box {
+        padding: 15px;
+        font-size: 16px;
+    }
 }
-.content-box p {
-    text-align: justify;
-    color: #555;
-    line-height: 1.6;
+
+/* contact us */
+
+.form-wrapper {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+.title{
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+.subtitle{
+    text-align: center;
+    color: #666;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+.contact-form {
+    flex: 2;
+    min-width: 500px;
+}
+
+.form-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.form-column{
+    flex: 1;
+    min-width: 250px;
+}
+.form-label{
+    display: block;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.form-input,
+.form-textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s, transform 0.3s;
+}
+.form-input:focus,
+.form-textarea:focus{
+    border-color: #6f6df4;
+    outline: none;
+    transform: scale(1.02);
+}
+.form-textarea{
+    resize: none;
+}
+.submit-button{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6f6df4, #4c46f5);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+.submit-button:hover{
+    background: linear-gradient(135deg, #4c46f5, #6f6df4);
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 30px;
+    }
+    
+    .contact-form,
+    .contact-info {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .form-wrapper {
+        padding: 20px;
+    }
 }
 
 
