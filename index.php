@@ -12,7 +12,7 @@
         <section class="carousel ">
             <div class="carousel-container">
                 <div class="slide active">
-                    <img src="assets/images/slider/Online Education & Skilling.png" alt="Online Learning">
+                    <img src="assets/images/slider/Online Education & Skilling2.png" alt="Online Learning">
                     <!-- <div class="caption">Welcome to Online Education & Skilling</div> -->
                 </div>
                 <div class="slide">
