@@ -60,13 +60,10 @@
                 <center><u>Dean</u></center>
             </h2>
             <div class="col-lg-5 col-md-6 col-sm-10">
-                <div class="team-card-container" style="max-width: 550px; height: 320px; margin: auto;">
-                    <div class="team-card" style="width: 100%; height: 100%; position: relative;">
-                        <div class="team-card-front"
-                            style="background: linear-gradient(135deg, #ffffff, #f8f9fa);justify-content: left;justify-items: left; display: flex; align-items: left; padding: 20px; border-radius: 8px;">
-                            <img src="assets/images/staffs/HBK_2024.jpg" class="profile-img"
-                                style="width: 150px; height: 200px; border-radius: 12px; object-fit: cover; margin-right: 15px; border: 3px solid #ddd;"
-                                alt="Profile">
+                <div class="team-card-container">
+                    <div class="team-card">
+                        <div class="team-card-front">
+                            <img src="assets/images/staffs/HBK_2024.jpg" class="profile-img" alt="Profile">
                             <div>
                                 <h5 class="fw-bold">Prof. Hemant B. Kaushik</h5>
                                 <p class="text-muted">Dean of Online Education and Skilling</p>
@@ -74,8 +71,7 @@
                                     Degree Programmes.</p> -->
                             </div>
                         </div>
-                        <div class="team-card-back"
-                            style="background: #b3b6b7; color: white; text-align: left; display: flex; flex-direction: column; justify-content: left; align-items: left; border-radius: 12px; transform: rotateY(180deg); padding: 20px;">
+                        <div class="team-card-back">
                             <h5 class="fw-bold">Contact Info</h5>
                             <p>📞 0361-258 XXXX</p>
                             <p>✉️does@iitg.ac.in</p>
@@ -90,21 +86,17 @@
                 <center><u>HoS</u></center>
             </h2>
             <div class="col-lg-5 col-md-6 col-sm-10">
-                <div class="team-card-container" style="max-width: 550px; height: 320px; margin: auto;">
-                    <div class="team-card" style="width: 100%; height: 100%; position: relative;">
-                        <div class="team-card-front"
-                            style="background: linear-gradient(135deg, #ffffff, #f8f9fa); display: flex; align-items: center; padding: 20px; border-radius: 8px;">
-                            <img src="assets/images/staffs/JibonChDas.jpg" alt="HoS" class="profile-img"
-                                style="width: 150px; height: 200px; border-radius: 12px; object-fit: cover; margin-right: 15px; border: 3px solid #ddd;"
-                                alt="Profile">
+                <div class="team-card-container">
+                    <div class="team-card">
+                        <div class="team-card-front">
+                            <img src="assets/images/staffs/JibonChDas.jpg" class="profile-img" alt="HoS">
                             <div>
                                 <h5 class="fw-bold">Mr Jiban Chandra Barman</h5>
                                 <p class="text-muted">HoS, Online Education and Skilling</p>
                                 
                             </div>
                         </div>
-                        <div class="team-card-back"
-                            style="background: #b3b6b7; color: white; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 12px; transform: rotateY(180deg); padding: 20px;">
+                        <div class="team-card-back">
                             <h5 class="fw-bold">Contact Info</h5>
                             <p>📞 0361-258 XXXX</p>
                             <p>✉️ jbarman @ iitg.ac.in</p>
