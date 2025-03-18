@@ -20,8 +20,6 @@ include './header.php';
         <h1 class="text-center" style="visibility: hidden;">Web-Page under development</h1>
         <h1 class="text-center" style="visibility: hidden;">Web-Page under development</h1>
 
-       
-  
     </div>
    
 

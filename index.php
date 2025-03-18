@@ -16,17 +16,17 @@
                     <div class="caption">Transform Your Future with Digital Learning.</div>
                 </div>
                 <div class="slide">
-                    <img src="assets/images/slider/culturalEvents.png" alt="Skill Development">
+                    <img src="assets/images/slider/culturalNew.png" alt="Skill Development">
                     <div class="caption">The joyful cultural night</div>
                 </div>
                 <div class="slide">
                     <img src="assets/images/slider/AI_Con_New.jpg" alt="Team Work">
                     <!-- <div class="caption">Learn from Industry Experts</div> -->
                 </div>
-                <!-- <div class="slide">
-                    <img src="assets/images/slider/ban4.jpeg" alt="Online Learning"> -->
+                 <div class="slide">
+                    <img src="assets/images/slider/certificateDis.png" alt="Certificate Distribution"> 
                     <!-- <div class="caption">Transform Your Future with Digital Learning</div> -->
-                <!-- </div> -->
+                 </div> 
                 
             </div>
 
