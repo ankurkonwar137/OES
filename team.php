@@ -5,49 +5,6 @@ include './header.php';
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Education & Skilling</title>
-    <link rel="icon" href="assets/icons/iit_icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/bootstrap-5.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
-
-    <link rel="stylesheet" href="assets/css/styleTeam.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <style>
-        @media (max-width: 768px) {
-            .team-card-container {
-                max-width: 350px !important;
-                height: 300px !important;
-            }
-
-            .profile-img {
-                width: 130px !important;
-                height: 180px !important;
-                margin-bottom: 10px;
-            }
-
-            .team-card-front {
-                flex-direction: column !important;
-                text-align: left !important;
-                padding: 15px !important;
-            }
-
-            .team-card h5 {
-                font-size: 1rem !important;
-            }
-
-            .team-card p {
-                font-size: 0.85rem !important;
-            }
-        }
-    </style>
-
-</head>
-
 <body class="bg-light">
     <!-- <div id="navbar-placeholder"></div> -->
 

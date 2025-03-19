@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/styleTeam.css">
+    
     <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <header>
@@ -41,39 +45,31 @@
             </button>
 
             <!-- Navigation Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 1.2rem;font-style: sans-serif; font-weight: 1000;">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php"><b>Home</b></a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php#about"><b>About</b></a></li>
                     
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href='#'">
                             <b>Team</b>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="teamDropdown">
-                            <li><a href="team.php" class="dropdown-item">Online Programmes</a></li>
+                            <li><a href="team.php" class="dropdown-item" onclick="window.location.href='team.php'">Online Programmes</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href='#'">
                             <b>Courses</b>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                            <li><a class="dropdown-item" href="#">Technical</a></li>
-                            <li><a class="dropdown-item" href="#">Professional</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="window.location.href='#'">Technical</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="window.location.href='#'">Professional</a></li>
                         </ul>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <b>Team</b>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="teamDropdown">
-                            <li><a href="team.html" class="dropdown-item">Online Programmes</a></li>
-                        </ul>
-                    </li> -->
+                    <li class="nav-item"><a class="nav-link" href="contact.php"><b>Contact</b></a></li>
                 </ul>
             </div>
         </div>

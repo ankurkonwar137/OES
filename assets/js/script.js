@@ -77,34 +77,50 @@ $(document).ready(function () {
         function () { this.start(); }
     );
 
-    //load header and footer
-    $("#navbar-placeholder").load("header.html", function() {
-        // Initialize dropdowns after header is loaded
-        $("#navbar-placeholder").load("header.html", function() {
-            // Initialize Bootstrap dropdowns
-            var dropdowns = document.querySelectorAll('.dropdown-toggle');
-            dropdowns.forEach(function(dropdown) {
-                dropdown.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    var dropdownMenu = this.nextElementSibling;
-                    dropdownMenu.classList.toggle('show');
-                });
-            });
-        });
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.matches('.dropdown-toggle')) {
-            var dropdowns = document.querySelectorAll('.dropdown-menu.show');
-            dropdowns.forEach(function(dropdown) {
-                dropdown.classList.remove('show');
-            });
+    // Mobile navigation and dropdown handling
+    $(document).on('click touchstart', function(e) {
+        const $navbar = $('.navbar-collapse');
+        const $toggler = $('.navbar-toggler');
+        
+        // Close navbar when clicking outside or on toggler when opened
+        if (!$(e.target).closest('.navbar-collapse').length && 
+            !$(e.target).closest('.navbar-toggler').length && 
+            $navbar.hasClass('show')) {
+            $navbar.collapse('hide');
+        }
+        
+        // Close dropdowns when clicking outside
+        if (!$(e.target).closest('.dropdown').length && 
+            !$(e.target).hasClass('dropdown-toggle')) {
+            $('.dropdown-menu').removeClass('show');
         }
     });
-    $("#footer-placeholder").load("footer.html");
 
+    // Handle navbar toggler click
+    $('.navbar-toggler').on('click', function() {
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.dropdown-menu').removeClass('show');
+        }
+    });
 
+    // Handle dropdown item clicks
+    $('.dropdown-toggle').on('click touchstart', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const dropdownMenu = $(this).next('.dropdown-menu');
+        $('.dropdown-menu').not(dropdownMenu).removeClass('show');
+        dropdownMenu.toggleClass('show');
+    });
+
+    $('.dropdown-item').on('click touchstart', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const href = $(this).attr('href');
+        if (href && href !== '#') {
+            window.location.href = href;
+        }
+        $(this).closest('.dropdown-menu').removeClass('show');
+        $('.navbar-collapse').collapse('hide');
+    });
 });
 

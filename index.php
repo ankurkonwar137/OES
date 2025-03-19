@@ -4,7 +4,6 @@
 
     <div class="container-fluid">
 
-        <!-- <div id="navbar-placeholder"></div> -->
 
         <div class="content-spacing"></div>
 
@@ -13,10 +12,10 @@
             <div class="carousel-container">
                 <div class="slide active">
                     <img src="assets/images/slider/OesNew2.png" alt="Online Learning">
-                    <div class="caption">Transform Your Future with Digital Learning.</div>
+                    <!-- <div class="caption">Transform Your Future with Digital Learning.</div> -->
                 </div>
                 <div class="slide">
-                    <img src="assets/images/slider/culturalNew.png" alt="Skill Development">
+                    <img src="assets/images/slider/culturalNewBan.png" alt="Skill Development">
                     <div class="caption">The joyful cultural night</div>
                 </div>
                 <div class="slide">
@@ -34,10 +33,6 @@
             <button class="prev" onclick="prevSlide()"></button>
             <button class="next" onclick="nextSlide()"></button>
 
-            <!-- For Dot Carousel-->
-            <!-- <div class="dots-container">
-           
-            </div> -->
         </section>
 
         <div class="container py-5">
@@ -46,7 +41,7 @@
                 <div class="col-lg-8 col-md-7 mb-4 d-flex">
                     <div class="content-box h-100 w-100" id="about">
                         <h2>About OES</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>The Online Education and Skilling section at IIT Guwahati is dedicated to providing world-class education through innovative online platforms. As a nodal department for all online educational initiatives at the institute, we focus on delivering high-quality, flexible learning opportunities that cater to a diverse audience. Our programs aim to empower individuals with the skills and knowledge necessary to excel in their professional and personal endeavors, fostering a culture of continuous learning and development. Through cutting-edge technologies and expert faculty, we bring the excellence of IIT Guwahati’s education to learners worldwide.</p>
                     </div>
                 </div>
 
@@ -70,48 +65,6 @@
                 </div>
             </div>
         </div>
-        
-            <!-- <div class="content-spacing"></div> -->
-        <!-- <div class="content-box">
-            <h2>About</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div> -->
-        
-         <!-- for contact us -->
-    <!-- <link rel="stylesheet" href="assets/css/contact.css"> -->
-    <div class="form-wrapper">
-        <h1 class="title">Contact Us</h1>
-        <p class="subtitle">Got questions or comments?<br>Use the form below to get in touch.</p>
-        <form class="contact-form">
-            <div class="form-row">
-                <div class="form-column">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" id="name" placeholder="Your name" class="form-input" required>
-                </div>
-                <div class="form-column">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" placeholder="Your email" class="form-input" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-column">
-                    <label for="contact" class="form-label">Contact</label>
-                    <input type="tel" id="contact" placeholder="Your phone number" class="form-input" required>
-                </div>
-                <div class="form-column">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input type="text" id="subject" placeholder="Subject" class="form-input" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-column">
-                    <label for="issue" class="form-label">Describe your issue</label>
-                    <textarea id="issue" placeholder="Describe your issue" rows="4" class="form-textarea" required></textarea>
-                </div>
-            </div>
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
-    </div>
 
     <?php include './footer.php'; ?>
     
