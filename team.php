@@ -1,6 +1,5 @@
-
-<?php 
- include './header.php';
+<?php
+include './header.php';
 ?>
 
 <!DOCTYPE html>
@@ -53,29 +52,27 @@
     <!-- <div id="navbar-placeholder"></div> -->
 
     <div class="container mt-4" id="idOnlineStaffs">
-        <h2 class="text-center mb-4">People handling Online Degree Programmes</h2>
 
         <div class="row g-6 justify-content-center" style="display: flex; align-items: center; text-align: left;">
             <h2 style="width: 100%;">
                 <center><u>Dean</u></center>
             </h2>
             <div class="col-lg-5 col-md-6 col-sm-10">
-                <div class="team-card-container">
+                <div class="team-card-container no-flip"> <!-- Added no-flip class -->
                     <div class="team-card">
                         <div class="team-card-front">
                             <img src="assets/images/staffs/HBK_2024.jpg" class="profile-img" alt="Profile">
                             <div>
                                 <h5 class="fw-bold">Prof. Hemant B. Kaushik</h5>
-                                <p class="text-muted">Dean of Online Education and Skilling</p>
+                                <p class="text-muted"><b>Dean of Online Education and Skilling</b></p>
                                 <!-- <p><strong>Responsibility:</strong> Administration of Academic Affairs of all Online
                                     Degree Programmes.</p> -->
+                                <h5 class="fw-bold">Contact Info</h5>
+                                <p>📞 0361-258 XXXX</p>
+                                <p>✉️does@iitg.ac.in</p>
                             </div>
                         </div>
-                        <div class="team-card-back">
-                            <h5 class="fw-bold">Contact Info</h5>
-                            <p>📞 0361-258 XXXX</p>
-                            <p>✉️does@iitg.ac.in</p>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -86,29 +83,50 @@
                 <center><u>HoS</u></center>
             </h2>
             <div class="col-lg-5 col-md-6 col-sm-10">
-                <div class="team-card-container">
+                <div class="team-card-container no-flip">
                     <div class="team-card">
                         <div class="team-card-front">
                             <img src="assets/images/staffs/JibonChDas.jpg" class="profile-img" alt="HoS">
                             <div>
                                 <h5 class="fw-bold">Mr Jiban Chandra Barman</h5>
-                                <p class="text-muted">HoS, Online Education and Skilling</p>
-                                
+                                <p class="text-muted"><b>HoS, Online Education and Skilling</b></p>
+                                <h5 class="fw-bold">Contact Info</h5>
+                                <p>📞 0361-258 XXXX</p>
+                                <p>✉️ jbarman@iitg.ac.in</p>
                             </div>
                         </div>
-                        <div class="team-card-back">
-                            <h5 class="fw-bold">Contact Info</h5>
-                            <p>📞 0361-258 XXXX</p>
-                            <p>✉️ jbarman @ iitg.ac.in</p>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div><br />
 
+        <!-- Add margin-top and adjust z-index for better spacing and layering -->
+        <div style="position: relative; z-index: 2; margin-top: 2rem;">
+            <h2 class="text-center mb-4">People handling Online Degree Programmes</h2>
+        </div>
 
         <div class="row g-4">
             <!-- Team Member Card -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="team-card-container">
+                    <div class="team-card">
+                        <div class="team-card-front">
+                            <img src="assets/images/staffs/Pranjal.jpg" class="profile-img" alt="Profile">
+                            <div>
+                                <h5 class="fw-bold">Mr. Pranjal Bhattacharyya</h5>
+                                <p class="text-muted">Junior Superintendent</p>
+                                <p><strong>Responsibility:</strong> Responsible for all administrative works.</p>
+                            </div>
+                        </div>
+                        <div class="team-card-back">
+                            <h5 class="fw-bold">Contact Info</h5>
+                            <p>📞 0361-258 XXXX</p>
+                            <p>✉️ </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="team-card-container">
                     <div class="team-card">
@@ -213,7 +231,7 @@
                 </div>
             </div>
 
-            
+
 
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="team-card-container">
@@ -495,18 +513,20 @@
     //     $("#navbar-placeholder").load("header.html");
     //     $("#footer-placeholder").load("footer.html");
     // });
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", function() {
         document.querySelector(".scroll-top").style.display =
             window.scrollY > 200 ? "block" : "none";
     });
 
     function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     }
-
 </script>
 
 </html>
-<?php 
-    include './footer.php';
- ?>
+<?php
+include './footer.php';
+?>

@@ -10,7 +10,7 @@
 
 .team-card {
     width: 100%;
-    height: 280px;
+    height: 240px;  /* Reduced from 280px */
     position: relative;
     transition: all 0.3s ease;
 }
@@ -152,5 +152,107 @@
     }
 }
 
+/* Add this new class for non-flipping cards */
+.no-flip .team-card-front {
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
 
+.no-flip .team-card-back {
+    display: none;
+}
 
+/* Adjust the no-flip cards height accordingly */
+/* Update the no-flip card styles */
+.no-flip .team-card {
+    height: auto;
+    min-height: 240px;
+}
+
+@media (max-width: 768px) {
+    .no-flip .team-card {
+        min-height: 360px;  /* Increased height for mobile view */
+    }
+    
+    .no-flip .team-card-front {
+        height: 100%;
+        overflow: hidden;  /* Prevent content overflow */
+    }
+}
+
+@media (max-width: 576px) {
+    .no-flip .team-card {
+        min-height: 380px;  /* Further adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 1200px) {
+    .team-card {
+        height: 300px;
+    }
+    
+    .profile-img {
+        width: 130px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 992px) {
+    .team-card-container {
+        max-width: 500px;
+        margin: 0 auto 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-card {
+        height: 320px;
+    }
+
+    .team-card-front {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 160px;
+        margin: 0 0 15px 0;
+    }
+
+    .team-card h5 {
+        font-size: 1.1rem;
+    }
+
+    .team-card p {
+        font-size: 0.9rem;
+    }
+
+    .team-card-back {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-card {
+        height: 340px;
+    }
+
+    .profile-img {
+        width: 110px;
+        height: 150px;
+    }
+
+    .team-card h5 {
+        font-size: 1rem;
+    }
+
+    .team-card p {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+}
