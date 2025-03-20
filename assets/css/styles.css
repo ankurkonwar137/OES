@@ -42,6 +42,7 @@ body {
     justify-content: center;
     text-align: left;
     padding-left: 10px;
+    font-family:  sans-serif;
 }
 
 .hindi-text,
@@ -50,6 +51,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     color: #000;
+    font-family:  sans-serif;
 }
 
 
@@ -65,6 +67,8 @@ body {
         font-weight: bold;
     }
 }
+
+
 
 @media (max-width: 768px) {
     .text-behind-logo {
@@ -109,7 +113,55 @@ body {
     }
 }
 
-/* Fix Dropdown Hover Issue on Mobile */
+@media (min-width: 992px) {
+    #navbarNav {
+        font-family:  sans-serif;
+
+    }
+    .dropdown-menu {
+        font-family:  sans-serif;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        margin-top: 0;
+        border-radius: 1.5;
+        border: none;
+        background: #f0f1f3;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        border-radius: 1.5;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        display: block;
+    }
+
+    .dropdown-item {
+        border-radius: 1.5;
+        display: block;
+        padding: 12px 20px;
+        margin: 0;
+        transition: all 0.2s ease;
+        color: #140606;
+        font-weight: 500;
+        line-height: 1.2;
+        text-decoration: none;
+        font-family:  sans-serif;
+    }
+
+    .dropdown-item:hover {
+        border-radius: 1.5;
+        background-color: #dc3545;
+        color: #050505;
+    }
+}
+
+/*  Hover on Mobile */
 @media (max-width: 768px) {
     .navbar .dropdown:hover .dropdown-menu {
         display: none;

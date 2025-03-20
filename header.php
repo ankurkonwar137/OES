@@ -45,7 +45,7 @@
             </button>
 
             <!-- Navigation Links -->
-            <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 1.5rem;font-style: sans-serif; font-weight: 500;">
+            <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 1.4rem;font-weight: 350;">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php"><b>Home</b></a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php#about"><b>About</b></a></li>

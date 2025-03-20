@@ -11,18 +11,18 @@
         <section class="carousel ">
             <div class="carousel-container">
                 <div class="slide active">
-                    <img src="assets/images/slider/OesNew2.png" alt="Online Learning">
+                    <img src="assets/images/slider/OnlineEducation&Skilling.png" alt="Online Learning">
                     <!-- <div class="caption">Transform Your Future with Digital Learning.</div> -->
                 </div>
                 <div class="slide">
-                    <img src="assets/images/slider/culturalNewBan.png" alt="Skill Development">
+                    <img src="assets/images/slider/culturalNew.png" alt="Skill Development">
                     <div class="caption">The joyful cultural night</div>
                 </div>
                 <div class="slide">
                     <img src="assets/images/slider/AI_Con_New.jpg" alt="Team Work">
                     <!-- <div class="caption">Learn from Industry Experts</div> -->
                 </div>
-                 <div class="slide">
+                 <div class="slide"> 
                     <img src="assets/images/slider/certificateDis.png" alt="Certificate Distribution"> 
                     <!-- <div class="caption">Transform Your Future with Digital Learning</div> -->
                  </div> 

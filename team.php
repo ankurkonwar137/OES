@@ -15,7 +15,7 @@ include './header.php';
                 <center><u>Dean</u></center>
             </h2>
             <div class="col-lg-5 col-md-6 col-sm-10">
-                <div class="team-card-container no-flip"> <!-- Added no-flip class -->
+                <div class="team-card-container no-flip"> 
                     <div class="team-card">
                         <div class="team-card-front">
                             <img src="assets/images/staffs/HBK_2024.jpg" class="profile-img" alt="Profile">
@@ -24,9 +24,10 @@ include './header.php';
                                 <p class="text-muted"><b>Dean of Online Education and Skilling</b></p>
                                 <!-- <p><strong>Responsibility:</strong> Administration of Academic Affairs of all Online
                                     Degree Programmes.</p> -->
-                                <h5 class="fw-bold">Contact Info</h5>
+                                <!-- <h5 class="fw-bold">Contact Info</h5> -->
+                                 <br/>
                                 <p>📞 0361-258 XXXX</p>
-                                <p>✉️does@iitg.ac.in</p>
+                                <p><i class="fa fa-envelope" aria-hidden="true" style="color:red"></i> does@iitg.ac.in</p>
                             </div>
                         </div>
 
@@ -47,9 +48,9 @@ include './header.php';
                             <div>
                                 <h5 class="fw-bold">Mr Jiban Chandra Barman</h5>
                                 <p class="text-muted"><b>HoS, Online Education and Skilling</b></p>
-                                <h5 class="fw-bold">Contact Info</h5>
+                                <!-- <h5 class="fw-bold">Contact Info</h5> --><br/>
                                 <p>📞 0361-258 XXXX</p>
-                                <p>✉️ jbarman@iitg.ac.in</p>
+                                <p><i class="fa fa-envelope" aria-hidden="true" style="color:red"></i> jbarman@iitg.ac.in</p>
                             </div>
                         </div>
 
@@ -58,13 +59,11 @@ include './header.php';
             </div>
         </div><br />
 
-        <!-- Add margin-top and adjust z-index for better spacing and layering -->
         <div style="position: relative; z-index: 2; margin-top: 2rem;">
             <h2 class="text-center mb-4">People handling Online Degree Programmes</h2>
         </div>
 
         <div class="row g-4">
-            <!-- Team Member Card -->
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="team-card-container">
                     <div class="team-card">
@@ -105,7 +104,6 @@ include './header.php';
                 </div>
             </div>
 
-            <!-- Repeat for other members -->
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="team-card-container">
                     <div class="team-card">
@@ -188,8 +186,6 @@ include './header.php';
                     </div>
                 </div>
             </div>
-
-
 
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="team-card-container">
