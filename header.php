@@ -20,6 +20,22 @@
     
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+    //for ios specific event dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+        if(/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+            document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
+                element.addEventListener('click', function(e) {
+                    if(window.innerWidth < 992) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        $(this).dropdown('toggle');
+                    }
+                });
+            });
+        }
+    });
+    </script>
 </head>
 
 <header>
@@ -52,23 +68,24 @@
                     
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href='#'">
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <b>Team</b>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="teamDropdown">
-                            <li><a href="team.php" class="dropdown-item" onclick="window.location.href='team.php'">Online Programmes</a></li>
+                            <li><a href="team.php" class="dropdown-item">Online Programmes</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href='#'">
-                            <b>Courses</b>
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Skilling</b>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                            <li><a class="dropdown-item" href="#" onclick="window.location.href='#'">Technical</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="window.location.href='#'">Professional</a></li>
+                            <li><a class="dropdown-item" href="#">Technical</a></li>
+                            <li><a class="dropdown-item" href="#">Professional</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-item"><a class="nav-link" href="contact.php"><b>Contact</b></a></li>
                 </ul>
             </div>

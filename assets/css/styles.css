@@ -19,6 +19,7 @@ body {
     /* background-color: #ecf0f1; */
     padding: 10px 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Logo on Left */
@@ -81,14 +82,40 @@ body {
         right: 10px;
         top: 10px;
         text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
     }
 
     .navbar-nav {
         text-align: center;
+        -webkit-overflow-scrolling: touch;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    /* Enhanced iOS specific dropdown fixes */
+    .dropdown-menu {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        cursor: pointer;
+    }
+
+    .dropdown-toggle {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        -webkit-user-select: none;
+        user-select: none;
     }
 
     .navbar-collapse {
         justify-content: flex-end;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
@@ -189,6 +216,9 @@ body {
         padding: 1rem;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         z-index: 1000;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
     }
 
     .dropdown-menu {
@@ -198,6 +228,8 @@ body {
         border: none;
         box-shadow: none;
         padding: 0;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
     }
 
     .dropdown-item {
@@ -206,6 +238,9 @@ body {
         text-align: center;
         background-color: #fff;
         border-bottom: 1px solid #eee;
+        cursor: pointer;
+        -webkit-user-select: none;
+        user-select: none;
     }
 
     .dropdown-item:last-child {
@@ -889,5 +924,12 @@ footer {
     .notification-panel {
         min-height: 280px;
     }
+}
+
+/* disable notification for admission */
+.disabled-link {
+    pointer-events: none;
+    cursor: default; /* Optional: Changes the cursor to default instead of pointer */
+    opacity: 0.6; /* Optional: Visually indicate the link is disabled */
 }
 

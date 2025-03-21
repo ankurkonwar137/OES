@@ -52,7 +52,7 @@
                         <div class="notification-content">
                             <marquee direction="up" scrollamount="2" behavior="scroll" class="notification-scroll" onmouseover="this.stop();" onmouseout="this.start();">
                                 <a href="https://iitg.ac.in/acad/admission/online/" target="_blank" class="notification-item">📢 Online BSc (Hons) in AI</a>
-                                <a href="#" class="notification-item">📢 Exam Date Announced</a>
+                                <a href="https://opadmission.iitg.ac.in/" target="_blank" class="notification-item disabled-link">📢 BSc (Hons) in Data Science and Artificial Intelligence</a>
                                 <a href="#" class="notification-item">📢 New Course Available</a>
                                 <a href="#" class="notification-item">📢 Announcement for new admission</a>
                                 <a href="#" class="notification-item">📢 Workshop on Cyber-Security</a>
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-
+        
     <?php include './footer.php'; ?>
     
    
