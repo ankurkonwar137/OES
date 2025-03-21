@@ -128,7 +128,7 @@ body {
         margin-top: 0;
         border-radius: 1.5;
         border: none;
-        background: #f0f1f3;
+        background: #808080;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 0;
     }
@@ -147,7 +147,7 @@ body {
         padding: 12px 20px;
         margin: 0;
         transition: all 0.2s ease;
-        color: #140606;
+        color: #000000;
         font-weight: 500;
         line-height: 1.2;
         text-decoration: none;
@@ -156,8 +156,8 @@ body {
 
     .dropdown-item:hover {
         border-radius: 1.5;
-        background-color: #dc3545;
-        color: #050505;
+        background-color: #FDD835;
+        color: #a82f2f;
     }
 }
 
@@ -466,32 +466,42 @@ h1 {
 
 /* Floating notification panel */
 .notification-panel {
-    position: absolute;
-    right: 283px;
-    top: 584px;
-    width: 305px;
-    background: #56b0b0;
-    color: white;
-    border-radius: 10px;
+    background: #259292;
     padding: 15px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    position: sticky;
+    top: 20px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .notification-panel {
-        width: 240px;
-    }
+.notification-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-@media (max-width: 768px) {
+.notification-scroll {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 40px;
+}
+
+.view-all {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+}
+
+@media (max-width: 767px) {
     .notification-panel {
-        position: relative;
-        width: 100%;
-        margin: 10px 0;
-        right: 0;
-        top: auto;
+        position: static;
+        margin: 20px 0;
     }
 }
 
@@ -571,11 +581,44 @@ h1 {
 .notification-content {
     height: auto;
     max-height: 400px;
+    position: relative;  /* Add this */
+    display: flex;      /* Add this */
+    flex-direction: column;  /* Add this */
 }
 
 .notification-scroll {
     max-height: 350px;
     overflow-y: auto;
+    flex-grow: 1;  /* Add this */
+}
+
+.view-all {
+    text-align: right;
+    margin-top: auto;  /* Change this from 15px */
+    padding-top: 10px;  /* Add this */
+}
+
+@media (max-width: 767px) {
+    .notification-panel {
+        margin-top: 20px;
+        position: static;
+    }
+    
+    .notification-content {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .notification-scroll {
+        height: 200px;
+        flex-grow: 1;
+    }
+
+    .view-all {
+        margin-top: auto;
+        padding-top: 10px;
+    }
 }
 
 .notification-item {
@@ -827,4 +870,24 @@ footer {
 }
 
 
+/* notification for mini laptop  */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .container {
+        max-width: 95%;
+    }
+    
+    .col-lg-8 {
+        flex: 0 0 65%;
+        max-width: 65%;
+    }
+    
+    .col-lg-4 {
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+
+    .notification-panel {
+        min-height: 280px;
+    }
+}
 

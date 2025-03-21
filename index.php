@@ -19,7 +19,7 @@
                     <div class="caption">The joyful cultural night</div>
                 </div>
                 <div class="slide">
-                    <img src="assets/images/slider/AI_Con_New.jpg" alt="Team Work">
+                    <img src="assets/images/slider/AI_Confl.png" alt="Team Work">
                     <!-- <div class="caption">Learn from Industry Experts</div> -->
                 </div>
                  <div class="slide"> 

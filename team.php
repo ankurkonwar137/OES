@@ -155,7 +155,8 @@ include './header.php';
                             <div>
                                 <h5 class="fw-bold">Ms. Anusha Narne</h5>
                                 <p class="text-muted">Asst. Project Engineer</p>
-                                <p><strong>Responsibility:</strong> Responsible for ..........</p>
+                                <p><strong>Responsibility:</strong> Responsible for managing all aspects of the Online
+                                Portal and Database Operations.</p>
                             </div>
                         </div>
                         <div class="team-card-back">
