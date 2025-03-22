@@ -19,7 +19,7 @@ body {
     /* background-color: #ecf0f1; */
     padding: 10px 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    -webkit-tap-highlight-color: transparent;
+    /* -webkit-tap-highlight-color: transparent; */
 }
 
 /* Logo on Left */
@@ -82,40 +82,48 @@ body {
         right: 10px;
         top: 10px;
         text-align: center;
-        -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
+        /* -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation; */
     }
 
     .navbar-nav {
         text-align: center;
-        -webkit-overflow-scrolling: touch;
-        -webkit-user-select: none;
-        user-select: none;
+        /* -webkit-overflow-scrolling: touch;
+        -webkit-user-select: none; */
+        /* user-select: none; */
     }
 
     /* Enhanced iOS specific dropdown fixes */
     .dropdown-menu {
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
+        display: none;
+        position: static !important;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        border: none;
+        box-shadow: none;
+        margin-top: 0;
+        padding: 0.5rem 0;
         cursor: pointer;
     }
 
+    .dropdown-menu.show {
+        display: block;
+    }
+
     .dropdown-toggle {
-        -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
-        -webkit-user-select: none;
-        user-select: none;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .dropdown-toggle::after {
+        margin-left: 0.5em;
+        vertical-align: middle;
     }
 
     .navbar-collapse {
         justify-content: flex-end;
-        -webkit-overflow-scrolling: touch;
+        /* -webkit-overflow-scrolling: touch; */
     }
 }
 
@@ -216,9 +224,6 @@ body {
         padding: 1rem;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         z-index: 1000;
-        -webkit-overflow-scrolling: touch;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
     }
 
     .dropdown-menu {
@@ -228,8 +233,11 @@ body {
         border: none;
         box-shadow: none;
         padding: 0;
-        -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
+        display: none; /* Add this */
+    }
+
+    .dropdown-menu.show {
+        display: block !important; /* Add this */
     }
 
     .dropdown-item {
@@ -239,17 +247,17 @@ body {
         background-color: #fff;
         border-bottom: 1px solid #eee;
         cursor: pointer;
-        -webkit-user-select: none;
-        user-select: none;
+    }
+}
+
+/* Remove or modify these conflicting styles */
+@media (max-width: 768px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: none;
     }
 
-    .dropdown-item:last-child {
-        border-bottom: none;
-    }
-
-    .dropdown-item:active, 
-    .dropdown-item:focus {
-        background-color: #e9ecef;
+    .navbar .dropdown-menu.show {
+        display: block !important;
     }
 }
 

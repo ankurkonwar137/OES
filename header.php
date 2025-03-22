@@ -20,22 +20,6 @@
     
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
-    <script>
-    //for ios specific event dropdown
-    document.addEventListener('DOMContentLoaded', function() {
-        if(/iPhone|iPad|iPod/.test(navigator.userAgent)) {
-            document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
-                element.addEventListener('click', function(e) {
-                    if(window.innerWidth < 992) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        $(this).dropdown('toggle');
-                    }
-                });
-            });
-        }
-    });
-    </script>
 </head>
 
 <header>
@@ -94,3 +78,89 @@
 </header>
 
 <body class="bg-light">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdowns = document.querySelectorAll('.dropdown-toggle');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const isMobile = () => window.innerWidth < 992;
+
+        // Initialize Bootstrap dropdowns
+        dropdowns.forEach(dropdown => {
+            const instance = new bootstrap.Dropdown(dropdown, {
+                autoClose: 'outside'
+            });
+
+            // Handle dropdown clicks and touches
+            ['click', 'touchstart'].forEach(eventType => {
+                dropdown.addEventListener(eventType, function(e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(other => {
+                            if (other !== this) {
+                                const otherInstance = bootstrap.Dropdown.getInstance(other);
+                                if (otherInstance) otherInstance.hide();
+                            }
+                        });
+                        
+                        // Toggle current dropdown
+                        if (this.classList.contains('show')) {
+                            instance.hide();
+                        } else {
+                            instance.show();
+                        }
+                    }
+                }, { passive: false });
+            });
+
+            // Handle dropdown items
+            const dropdownMenu = dropdown.nextElementSibling;
+            if (dropdownMenu) {
+                dropdownMenu.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        instance.hide();
+                        if (isMobile()) {
+                            navbarCollapse.classList.remove('show');
+                        }
+                    });
+                });
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.navbar')) {
+                navbarCollapse.classList.remove('show');
+                dropdowns.forEach(dropdown => {
+                    bootstrap.Dropdown.getInstance(dropdown)?.hide();
+                });
+            }
+        });
+
+        // Handle navbar toggler
+        navbarToggler.addEventListener('click', function() {
+            dropdowns.forEach(dropdown => {
+                const dropdownInstance = bootstrap.Dropdown.getInstance(dropdown);
+                if (dropdownInstance) dropdownInstance.hide();
+            });
+        });
+
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (!isMobile()) {
+                    navbarCollapse.classList.remove('show');
+                    dropdowns.forEach(dropdown => {
+                        bootstrap.Dropdown.getInstance(dropdown)?.hide();
+                    });
+                }
+            }, 250);
+        });
+    });
+    </script>
+</body>
